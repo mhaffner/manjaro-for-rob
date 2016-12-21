@@ -92,7 +92,9 @@
 - Removing packages that were installed with ~pacman~ is super easy. Simply use
 
    ~sudo pacman -R chromium~
-
+ 
+- Other options for removing packages (such as removing dependencies) can be
+  found in the docs.
 * Conclusion
 - Manjaro is awesome.
 - This version of Manjaro has KDE; for visual issues, consult the KDE docs
@@ -103,6 +105,3 @@
   of the page.
 - If you have driver issues, simply installing a new kernel and loading this
   kernel upon boot (under 'Advanced options for Manjaro') might fix your problems.
-- If you have driver issues, simply installing a new kernel and loading this
-  kernel upon boot (under 'Advanced options for Manjaro') might fix your
-  problems.
