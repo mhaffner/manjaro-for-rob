@@ -5,8 +5,6 @@
   the other way around. The Arch Linux [[https://wiki.archlinux.org][wiki page]] is a great resource and will
   usually have what you need if you get stuck. There are two other popular Arch
   Linux distributions: Antergos and Apricity. Personally, I like Manjaro best.
-- This file ought to be opened with a web browser. Firefox is installed by
-  default on Manjaro.
 - You'll probably want to change the username and password (although it may be
   easier to do add your own username and then delete the old one later). I meant
   to do this for you, but.... well.... it's a long story.
