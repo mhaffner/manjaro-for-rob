@@ -1,0 +1,110 @@
+* Intro
+- Rob, here is round 2 of trying to get you a hard drive with GNU/Linux. This
+  distribution is called Manjaro and is a derivative of Arch Linux. Basically
+  anything that applies to Arch Linux applies to Manjaro, but not necessarily
+  the other way around. The Arch Linux [[https://wiki.archlinux.org][wiki page]] is a great resource and will
+  usually have what you need if you get stuck. There are two other popular Arch
+  Linux distributions: Antergos and Apricity. Personally, I like Manjaro best.
+- This file ought to be opened with a web browser. Firefox is installed by
+  default on Manjaro.
+- You'll probably want to change the username and password (although it may be
+  easier to do add your own username and then delete the old one later). I meant
+  to do this for you, but.... well.... it's a long story.
+* How to boot from this hard drive
+- Since you had issues booting from the last hard drive, I'm not super confident
+  about this one, so here are some things to check:
+  - Be sure the SATA cable is plugged into both the motherboard and the hard
+    drive.
+  - Be sure the power cable is plugged into the power supply and the hard drive
+    (I know these two are basic and I'm 99% sure you would have done these, but
+    I just want to be sure).
+  - Disable Secure Boot (in BIOS)
+  - Enable CSM (in BIOS)
+  - Enable Legacy boot?
+  - If you are able to boot up a different Linux hard drive, see if this drive
+    is recognized. If not, It may be a drive issue (although I booted up from
+    this drive on two different computers in Stillwater). If it is recognized,
+    you may have to add a boot option manually in the BIOS. At that point
+    though, it may be easier to just reinstall Manjaro.
+* Why I like Manjaro/Arch Linux
+- There are a few features that make Manjaro awesome in my opinion. One is that
+  it is basically version-less. There is really only one distribution of
+  Manjaro. It operates on a "rolling release" schedule, so you only have to
+  update packages to have the latest version of Manjaro. If you took a machine
+  with Manjaro 15.12 and another machine with Manjaro 16.10 and completed full
+  package upgrades with them, essentially there would be no difference between
+  the two. No risk of breaking your system as with upgrading from Ubuntu 14.04
+  to Ubuntu 16.04 (which is a serious concern) or as with Windows 8 to Windows
+  10, for instance.
+- There is a feature called Manjaro hardware detection that makes installing
+  drivers fairly easy, and most components work out of the box.
+- Manjaro has the ability to easily install, remove, load, and switch to
+  different Linux kernels. This is a /really/ nice feature.
+- The two default desktop environments for Manjaro are XFCE and KDE. XFCE is
+  minimalistic (which I typically like) but it's way too boring for me, so this
+  one has KDE. KDE is way configurable, so you can easily create hotkeys to snap
+  windows, launch programs, and execute commands if you want.
+- The Arch Linux package manager "pacman" is infinitely better than
+  Ubuntu/Debian's apt and aptitude. It's just way easier to use and way more
+  intelligent in my opinion (more on this later).
+- There is a community repository called AUR (@@html:<b>@@A@@html:</b>@@rch
+  Linux @@html:<b>@@U@@html:</b>@@ser @@html:<b>@@R@@html:</b>@@epository) that
+  has virtually everything that the standard Arch Linux repository does not
+  (i.e. Steam, GIS programs that I use, PlayOnLinux, etc.)
+- If a package is not in either repository but you are able to download a .tar,
+  you can let ~pacman~ handle the installation with 
+
+   ~pacman -U your-tar.tar~
+ 
+  This way, you do not have to build packages from source.
+- The Arch Linux repositories are so much more up to date than Ubuntu's. When I
+  was using Ubuntu, I frequently had to add additional ~ppa~'s to get the
+  latest versions of /R/, Emacs, GIS programs, and other non-standard software.
+  I never have to do this anymore. If a package is not in the standard Arch
+  Linux respoitory, it is in the ~AUR~. If it's not in either one of those, it's
+  usually really obscure, but if you can a ~.tar~, pacman can still handle it
+  after a download.
+- There are several terminal emulators pre-installed on Manjaro. One that is
+  really convenient is called ~Yakuake~. It is also called the drop-down
+  terminal and can be toggled on/off with ~f12~.
+- Arch Linux doesn't keep track of your keystrokes like Ubuntu and Windows.
+* Installing/updating/removing packages 
+- Since Manjaro operates on a rolling release schedule, it is recommended that
+  users do full upgrades often. All packages can be updated with a simple:
+
+   ~sudo pacman -Syu~
+   
+- Details on options and flags for ~pacman~ can be found [[https://www.archlinux.org/pacman/pacman.8.html][here]], but ~S~ means
+  Sync, ~y~ means refresh the package database, and ~u~ means upgrade. 
+- To install a single package such as the Chromium browser, type 
+
+   ~sudo pacman -S chromium~
+
+- Like with ~apt-get~, you can install multiple packages at once with something
+  like
+
+   ~sudo pacman -S chromium emacs vim~
+
+- To install packages from the AUR, you can use ~yaourt~ instead of ~pacman~,
+  and ~sudo~ is not required (although you will be prompted for a root password
+  if you need root privileges for installation)
+
+   ~yaourt steam~
+
+- Removing packages that were installed with ~pacman~ is super easy. Simply use
+
+   ~sudo pacman -R chromium~
+
+* Conclusion
+- Manjaro is awesome.
+- This version of Manjaro has KDE; for visual issues, consult the KDE docs
+  rather than Manjaro or Arch Linux. 
+- If you want to know how to install a /specific/ package, I would suggest just
+  googling 'package-name arch linux'. Usually the Arch Linux Wiki page comes up
+  first, and the exact package name that you install with ~pacman~ is at the top
+  of the page.
+- If you have driver issues, simply installing a new kernel and loading this
+  kernel upon boot (under 'Advanced options for Manjaro') might fix your problems.
+- If you have driver issues, simply installing a new kernel and loading this
+  kernel upon boot (under 'Advanced options for Manjaro') might fix your
+  problems.
